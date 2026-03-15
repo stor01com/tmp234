@@ -1,6 +1,6 @@
 ---
 - name: bootstrap a cluster via cephadm (with custom values)
-  cephadm_bootstrap:
+  ceph.automation.cephadm_bootstrap:
     mon_ip: 10.0.0.13
     docker: false
     #image: quay.ceph.io/ceph/daemon-base:latest-main-devel
