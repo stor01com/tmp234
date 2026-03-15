@@ -1,13 +1,5 @@
 ---
-# - name: Set cluster configuration options
-#   ansible.builtin.debug:
-#     msg: "{{ item.key }}: {{ item.name }} {{ item.value }}"
-#   loop: "{{ opi_cluster_config | dict2items }}"
-
-- name: Wyswietl klucze i wartosci
-  debug:
-    msg: "Sekcja: {{ parent.key }}, Klucz: {{ item.key }}, Wartosc: {{ item.value }}"
-  loop: "{{ parent.value | dict2items }}"
-  loop_control:
-    loop_var: item
-  with_items: "{{ opi_ceph_config | dict2items }}"
+- name: Set cluster configuration options
+  ansible.builtin.debug:
+    msg: "{{ item.key }}: {{ item.name }}"
+  loop: "{{ opi_cluster_config | dict2items }}"
