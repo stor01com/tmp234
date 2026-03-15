@@ -1,3 +1,6 @@
 ---
-- name: Import config
-  ansible.builtin.import_tasks: "config.yaml"
+- hosts: all
+
+  tasks:
+    - name: Import config
+      ansible.builtin.import_tasks: "config.yaml"
