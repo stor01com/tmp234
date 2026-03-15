@@ -1,6 +1,6 @@
 ---
 - name: set osd_pool_default_size value
-  ceph_config:
+  ceph.automation.ceph_config:
     action: set
     who: global
     option: osd_pool_default_size
