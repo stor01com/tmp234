@@ -4,7 +4,7 @@
 #     msg: "{{ item.key }}: {{ item.name }} {{ item.value }}"
 #   loop: "{{ opi_cluster_config | dict2items }}"
 
-- name: Wyświetl klucze i wartosci
+- name: Wyswietl klucze i wartosci
   debug:
     msg: "Sekcja: {{ parent.key }}, Klucz: {{ item.key }}, Wartosc: {{ item.value }}"
   loop: "{{ parent.value | dict2items }}"
