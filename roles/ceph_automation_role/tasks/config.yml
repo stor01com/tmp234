@@ -2,4 +2,4 @@
 - name: Set cluster configuration options
   ansible.builtin.debug:
     msg: "{{ item.key }}: {{ item.name }}"
-  loop: "{{ opi_cluster_config | dict2items }}"
+  loop: "{{ lookup('dict', user_configs) }}"
