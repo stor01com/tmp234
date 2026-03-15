@@ -1,0 +1,11 @@
+---
+- name: create an erasure code profile
+  ceph_ec_profile:
+    name: cold-stor-profile
+    k: 2
+    m: 2
+    plugin: isa
+    crush_device_class: cold-stor
+    crush_failure_domain: host
+    crush_root: default
+    state: present
