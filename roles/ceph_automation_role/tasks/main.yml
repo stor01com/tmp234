@@ -1,8 +1,0 @@
----
-- hosts: stor01
-
-  tasks:
-    - name: cluster config
-      ansible.builtin.import_tasks: "config.yml"
-    - name: crush rules
-      ansible.builtin.import_tasks: "crush.yml"

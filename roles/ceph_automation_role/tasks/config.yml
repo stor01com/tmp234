@@ -1,7 +1,0 @@
----
-- name: set osd_pool_default_size value
-  ceph_config:
-    action: get
-    who: global
-    option: osd_pool_default_size
-    value: 2
