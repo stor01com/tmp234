@@ -11,5 +11,3 @@
   loop_control:
     loop_var: item
   with_items: "{{ opi_ceph_config | dict2items }}"
-  loop_control:
-    loop_var: parent
