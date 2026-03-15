@@ -4,11 +4,11 @@
 #     msg: "{{ item.key }}: {{ item.name }} {{ item.value }}"
 #   loop: "{{ opi_cluster_config | dict2items }}"
 
-- name: Wyświetl klucze i wartości z pod-słowników
+- name: Wyświetl klucze i wartości
   debug:
-    msg: "Sekcja: {{ parent.key }}, Klucz: {{ item.key }}, Wartość: {{ item.value }}"
+    msg: "Sekcja: {{ parent.key }}, Klucz: {{ item.key }}, Wartosc: {{ item.value }}"
   loop: "{{ parent.value | dict2items }}"
-  loop_control:
+  loop_c  ontrol:
     loop_var: item
   with_items: "{{ opi_ceph_config | dict2items }}"
   loop_control:
