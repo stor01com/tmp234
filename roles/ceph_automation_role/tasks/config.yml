@@ -1,5 +1,7 @@
 ---
-- name: Set cluster configuration options
-  ansible.builtin.debug:
-    msg: "{{ item.key }}: {{ item.value }}"
-  loop: "{{ lookup('dict', opi_cluster_config) }}"
+- name: set osd_pool_default_size value
+  ceph_config:
+    action: get
+    who: global
+    option: osd_pool_default_size
+    value: 2
