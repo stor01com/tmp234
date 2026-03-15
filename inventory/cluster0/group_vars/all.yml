@@ -1,0 +1,4 @@
+opi_ceph_config:
+  global:
+    osd_pool_default_size: 1
+    osd_memory_target: 10485760

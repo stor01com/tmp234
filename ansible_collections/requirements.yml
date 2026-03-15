@@ -1,0 +1,7 @@
+# requirements.yml - Collections from Git repositories
+---
+collections:
+  # Instalacja z taga zgodnego z wersją Galaxy
+  - name: https://github.com/ceph/ceph.automation.git
+    type: git
+    version: 1.1.0

@@ -1,0 +1,5 @@
+---
+- name: Set cluster configuration options
+  ansible.builtin.debug:
+    msg: "{{ item.key }}: {{ item.name }} {{ item.value }}"
+  loop: "{{ opi_cluster_config | dict2items }}"
