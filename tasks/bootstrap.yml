@@ -1,7 +1,7 @@
 ---
 - name: Ensure spec file exists
   ansible.builtin.copy:
-    src: spec.yml
+    src: files/spec.yml
     dest: /tmp/spec.yml
     force: true
   become: true
