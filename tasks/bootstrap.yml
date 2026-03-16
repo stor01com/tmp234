@@ -1,4 +1,11 @@
 ---
+- name: Ensure spec file exists
+  ansible.builtin.copy:
+    src: files/spec.yml
+    dest: /tmp/spec.yml
+    force: true
+  become: true
+
 - name: bootstrap a cluster via cephadm (with custom values)
   ceph.automation.cephadm_bootstrap:
     mon_ip: 10.0.0.13
@@ -9,6 +16,6 @@
     firewalld: false
     log_to_file: false
     # config: initial_ceph.conf
-    apply_spec: ../inventory/cluster01/files/spec.yml
+    apply_spec: /tmp/spec.yml #../inventory/cluster01/files/spec.yml
     # initial_dashboard_user: admin
     # initial_dashboard_password: admin
