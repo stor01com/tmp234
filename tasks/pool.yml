@@ -1,0 +1,14 @@
+---
+- name: create a Ceph Crush erasure rule
+  ceph_crush_rule:
+    name: pula_ec
+    profile: cold-stor-profile
+    rule_type: erasure
+
+- name: create a Ceph Crush replicated rule
+  ceph_crush_rule:
+    name: pula_replikowana
+    bucket_root: default
+    bucket_type: host
+    device_class: hdd
+    rule_type: replicated

@@ -8,3 +8,5 @@
       ansible.builtin.import_tasks: "config.yml"
     - name: crush rules
       ansible.builtin.import_tasks: "crush.yml"
+    - name: pools
+      ansible.builtin.import_tasks: "pool.yml"
