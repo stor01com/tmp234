@@ -2,8 +2,8 @@
 - hosts: stor01
 
   tasks:
-    # - name: bootstrap cluster
-    #   ansible.builtin.import_tasks: "bootstrap.yml"
+    - name: bootstrap cluster
+      ansible.builtin.import_tasks: "bootstrap.yml"
     - name: cluster config
       ansible.builtin.import_tasks: "config.yml"
     - name: crush rules
