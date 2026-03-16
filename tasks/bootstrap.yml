@@ -5,17 +5,16 @@
     dest: /tmp/spec.yml
     force: true
   become: true
-
-- name: bootstrap a cluster via cephadm (with custom values)
-  ceph.automation.cephadm_bootstrap:
-    mon_ip: 10.0.0.13
-    docker: false
-    #image: quay.ceph.io/ceph/daemon-base:latest-main-devel
-    dashboard: false
-    monitoring: false
-    firewalld: false
-    log_to_file: false
-    # config: initial_ceph.conf
-    apply_spec: /tmp/spec.yml #../inventory/cluster01/files/spec.yml
-    # initial_dashboard_user: admin
-    # initial_dashboard_password: admin
+# - name: bootstrap a cluster via cephadm (with custom values)
+#   ceph.automation.cephadm_bootstrap:
+#     mon_ip: 10.0.0.13
+#     docker: false
+#     #image: quay.ceph.io/ceph/daemon-base:latest-main-devel
+#     dashboard: false
+#     monitoring: false
+#     firewalld: false
+#     log_to_file: false
+#     # config: initial_ceph.conf
+#     apply_spec: /tmp/spec.yml #../inventory/cluster01/files/spec.yml
+#     # initial_dashboard_user: admin
+#     # initial_dashboard_password: admin
