@@ -8,6 +8,7 @@
     monitoring: false
     firewalld: false
     log_to_file: false
+    # config: initial_ceph.conf
     # apply_spec: /tmp/spec.yml
     # initial_dashboard_user: admin
     # initial_dashboard_password: admin
