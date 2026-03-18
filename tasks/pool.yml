@@ -1,7 +1,7 @@
 ---
 - name: Create a replicated pool
   ceph.automation.ceph_pool:
-    name: replikowana
+    name: "replikowana"
     state: present
     size: 3
     application: rbd
