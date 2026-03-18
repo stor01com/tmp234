@@ -7,6 +7,7 @@
     application: rbd
     pool_type: replicated
     pg_autoscale_mode: off
+    rule_name: pula_replikowana
 
 - name: Create an EC pool
   ceph.automation.ceph_pool:
