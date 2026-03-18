@@ -1,3 +1,4 @@
+---
 - name: Pool creation
   hosts: all
   become: true
