@@ -1,5 +1,6 @@
+---
 - name: Add S3 user
-  radosgw_user:
+  ceph.automation.radosgw_user:
     name: s3user1
     email: s3user@domain.com
     state: present
