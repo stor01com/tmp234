@@ -10,7 +10,6 @@
     crush_root: default
     state: present
 
----
 - name: create a Ceph Crush erasure rule
   ceph.automation.ceph_crush_rule:
     name: pula_ec
