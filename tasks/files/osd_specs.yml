@@ -1,0 +1,49 @@
+---
+service_type: osd
+service_id: disk_layout_hdd
+placement:
+  host:
+    - stor01
+    - stor02
+spec:
+  data_devices:
+    rotational: 0
+    size: "14:"
+  db_devices:
+    rotational: 1
+    size: ":10"
+    limit: 2
+
+---
+service_type: osd
+service_id: disk_layout_nvme
+placement:
+  label: disk_layout_nvme
+spec:
+  data_devices:
+    rotational: 1
+    size: "14:"
+
+---
+service_type: osd
+service_id: disk_layout_wclasses
+placement:
+  hosts_pattern: "*"
+spec:
+  data_devices:
+    paths:
+      - path: /dev/sdb
+        crush_device_class: object_hdd
+      - path: /dev/sdc
+        crush_device_class: object_nvme
+
+---
+service_type: osd
+service_id: disk_layout_wclasses
+placement:
+  hosts_pattern: "*"
+crush_device_class: object_hdd
+spec:
+  data_devices:
+    paths:
+      - /dev/sdc

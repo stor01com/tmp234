@@ -3,5 +3,5 @@
   ceph.automation.ceph_config:
     action: set
     who: global
-    option: osd_pool_default_size
-    value: 2
+    option: mon_data_avail_warn
+    value: 20

@@ -1,0 +1,7 @@
+profile_name: 90-mon-host-profile
+placement:
+  hosts:
+    - stor01
+settings:
+  fs.file-max: 1000000
+  vm.swappiness: "10"

@@ -1,0 +1,34 @@
+service_type: rgw
+placement:
+  count: 2
+  hosts:
+    - host1
+    - host2
+    - host3
+
+service_type: rgw
+placement:
+  host_pattern: "stor0[1-3]"
+
+service_type: rgw
+placement:
+  host_pattern: "*"
+
+service_type: rgw
+placement:
+  host_pattern:
+    pattern: 'stor[0-9]|monstorplacement[0-9]'
+    pattern_type: regex
+
+
+service_type: rgw
+placement:
+  label: rgw
+  count_per_host: 2
+extra_container_args:
+  - "--cpus 2"
+
+service_type: rgw
+placement:
+  label: rgw
+  count_per_host: 2

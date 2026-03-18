@@ -1,0 +1,51 @@
+---
+
+service_type: rgw
+service_id: region1
+placement:
+  label: rgw-region1
+  count_per_host: 2
+networks:
+- 192.168.1.0/24
+spec:
+  rgw_frontend_port: 8080
+  rgw_realm: myrealm
+  rgw_zone: myzone
+  rgw_frontend_port: 5000
+  rgw_frontend_extra_args:
+  - ssl_certificate: ...
+
+
+
+service_type: rgw
+service_id: foo
+placement:
+  label: rgw
+spec:
+  rgw_realm: myrealm
+  rgw_zone: myzone
+  rgw_zonegroup: myzg
+  disable_multisite_sync_traffic: True
+
+service_type: rgw
+service_id: foo
+placement:
+  label: rgw
+spec:
+  rgw_realm: myrealm
+  rgw_zone: myzone
+  rgw_zonegroup: myzg
+  rgw_exit_timeout_secs: 120
+
+service_type: typ usługi, rgw, osd, mon...
+service_id: id usługi, np. domyslny_layout, s3region1...
+placement:
+  hosts:
+    - host1
+    - host2
+    - host3
+unmanaged: false
+networks:
+  - 192.169.142.0/24
+spec:
+  option: value

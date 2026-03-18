@@ -9,3 +9,18 @@
     crush_failure_domain: host
     crush_root: default
     state: present
+
+---
+- name: create a Ceph Crush erasure rule
+  ceph.automation.ceph_crush_rule:
+    name: pula_ec
+    profile: cold-stor-profile
+    rule_type: erasure
+
+- name: create a Ceph Crush replicated rule
+  ceph.automation.ceph_crush_rule:
+    name: pula_replikowana
+    bucket_root: default
+    bucket_type: host
+    device_class: hdd
+    rule_type: replicated
