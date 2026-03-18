@@ -10,3 +10,5 @@
       ansible.builtin.import_tasks: "crush.yml"
     - name: pools
       ansible.builtin.import_tasks: "pool.yml"
+    - name: rgw
+      ansible.builtin.import_tasks: "rgw.yml"

@@ -11,7 +11,7 @@
     pg_num: 16
     pgp_num: 16
 
-- name: Create a replicated pool
+- name: Set application on replicated pool
   ceph.automation.ceph_pool:
     name: "replikowana"
     application: rbd
