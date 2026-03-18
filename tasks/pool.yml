@@ -1,6 +1,6 @@
 ---
 - name: Create a replicated pool
-  ceph_pool:
+  ceph.automation.ceph_pool:
     name: replikowana
     state: present
     size: 3
@@ -9,7 +9,7 @@
     pg_autoscale_mode: off
 
 - name: Create an EC pool
-  ceph_pool:
+  ceph.automation.ceph_pool:
     name: pula_ec
     state: present
     erasure_profile: cold-stor-profile
