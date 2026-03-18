@@ -4,10 +4,15 @@
     name: "replikowana"
     state: present
     size: 3
-    application: rbd
+    #application: rbd
     pool_type: replicated
     pg_autoscale_mode: off
     rule_name: pula_replikowana
+
+- name: Create a replicated pool
+  ceph.automation.ceph_pool:
+    name: "replikowana"
+    application: rbd
 
 - name: Create an EC pool
   ceph.automation.ceph_pool:
