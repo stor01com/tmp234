@@ -1,5 +1,5 @@
 ---
-- name: set osd_pool_default_size value
+- name: set mon_data_avail_warn
   ceph.automation.ceph_config:
     action: set
     who: global
