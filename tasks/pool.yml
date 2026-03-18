@@ -8,6 +8,8 @@
     pool_type: replicated
     pg_autoscale_mode: off
     rule_name: pula_replikowana
+    pg_num: 16
+    pgp_num: 16
 
 - name: Create a replicated pool
   ceph.automation.ceph_pool:
