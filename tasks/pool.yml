@@ -1,25 +1,20 @@
 ---
-- name: Pool creation
-  hosts: all
-  become: true
+- name: Create a replicated pool
+  ceph_pool:
+    name: replikowana
+    state: present
+    size: 3
+    application: rbd
+    pool_type: replicated
+    pg_autoscale_mode: off
 
-  tasks:
-    - name: Create a replicated pool
-      ceph_pool:
-        name: replikowana
-        state: present
-        size: 3
-        application: rbd
-        pool_type: replicated
-        pg_autoscale_mode: off
-
-    - name: Create an EC pool
-      ceph_pool:
-        name: pula_ec
-        state: present
-        erasure_profile: cold-stor-profile
-        application: rgw
-        pool_type: erasure
-        pg_autoscale_mode: off
-        pg_num: 16
-        pgp_num: 16
+- name: Create an EC pool
+  ceph_pool:
+    name: pula_ec
+    state: present
+    erasure_profile: cold-stor-profile
+    application: rgw
+    pool_type: erasure
+    pg_autoscale_mode: off
+    pg_num: 16
+    pgp_num: 16
