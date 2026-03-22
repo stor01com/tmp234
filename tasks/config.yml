@@ -1,7 +1,10 @@
 ---
-- name: set mon_data_avail_warn
-  ceph.automation.ceph_config:
-    action: set
-    who: global
-    option: mon_data_avail_warn
-    value: 20
+- hosts: stor01
+
+  tasks:
+    - name: set mon_data_avail_warn
+      ceph.automation.ceph_config:
+        action: set
+        who: global
+        option: mon_data_avail_warn
+        value: 20

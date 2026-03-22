@@ -7,10 +7,10 @@ placement:
     - stor02
 spec:
   data_devices:
-    rotational: 0
+    rotational: 1
     size: "14:"
   db_devices:
-    rotational: 1
+    rotational: 0
     size: ":10"
     limit: 2
 
@@ -21,7 +21,7 @@ placement:
   label: disk_layout_nvme
 spec:
   data_devices:
-    rotational: 1
+    rotational: 0
     size: "14:"
 
 ---

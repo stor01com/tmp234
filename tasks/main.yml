@@ -12,3 +12,4 @@
       ansible.builtin.import_tasks: "pool.yml"
     - name: rgw
       ansible.builtin.import_tasks: "rgw.yml"
+ue=reed_s
